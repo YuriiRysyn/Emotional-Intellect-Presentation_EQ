@@ -1,0 +1,77 @@
+$downloadLinkBorderSize: 4px;
+$transiltionProps: all 0.3s linear;
+$orangeColor: #FE5803;
+
+.nav {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-left: 25px;
+    font-family: SourceCodePro, monospace;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    padding: 10px;
+    border: 4px solid transparent;
+    transition: $transiltionProps;
+
+    &:hover {
+      color: $orangeColor;
+      transform: scale(1.2);
+    }
+
+    &--download {
+      display: inline-block;
+      position: relative;
+      padding: 10px 25px;
+      margin-left: 10px;
+      border: $downloadLinkBorderSize solid;
+      color: #fff;
+      font-family: Montserrat, sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: $transiltionProps;
+      
+
+      &:hover {
+        color: $orangeColor;
+      }
+
+      &::before {
+        content: '';
+        height: 10px;
+        width: 10px;
+        border-radius: 5px;
+        background-color: $orangeColor;
+        position: absolute;
+        top: 100%;
+        left: 100%;
+        z-index: 3;
+        transition: $transiltionProps;
+        transform: translate(-$downloadLinkBorderSize, -$downloadLinkBorderSize);
+      }
+
+      &:hover::before{
+        background-color: #fff;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        height: 50%;
+        width: 18%;
+        top: 70%;
+        left: 90%;
+        background-color: #00CDDE;
+        z-index: 2;
+      }
+    }
+  }
+}

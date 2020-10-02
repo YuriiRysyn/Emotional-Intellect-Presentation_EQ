@@ -5,7 +5,6 @@ import './App.scss'
 
 // const cssClasses = 'app app--active';
 
-
 const App = () => (
     <div>
       <Slide1 />

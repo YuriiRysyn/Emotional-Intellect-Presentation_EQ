@@ -1,0 +1,68 @@
+.store {
+  display: flex;
+  opacity: 0;
+  animation: removeOpacity 0.5s linear 0.5s forwards;
+
+  &__link {
+    display: flex;
+    padding: 15px;
+    width: 190px;
+    border: 1px solid #fff;
+    color: #fff;
+    margin-right: 20px;
+
+      // for hover
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s linear;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: green;
+    transition: all 0.3s linear;
+    z-index: -1;
+  }
+
+  &:hover {
+    border: 2px solid #FE5803;
+    box-shadow: 0 0 10px #FE5803;
+    transform: scale(1.05);
+
+    &:before {
+      width: 100%;
+    }
+  }
+
+    &--description {
+      margin-left: 17px;
+
+
+      &-download {
+        font-family: Montserrat, sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        opacity: 0.8;
+      }
+
+      &-market-name {
+        font-family: Montserrat, sans-serif;
+
+        font-weight: 600;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+@keyframes removeOpacity {
+  to {
+    opacity: 1;
+  }
+}
