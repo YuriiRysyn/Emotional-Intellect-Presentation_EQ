@@ -1,9 +1,8 @@
 @import '../../styles/mixins';
 
-.root-1 {
+.root-2 {
   @include slideProp;
-  background-color: #00CDDE;
-
+  background-color: #FFB208;
 
   position: relative;
   // transform: translateX(100%);
