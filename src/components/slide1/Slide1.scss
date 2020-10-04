@@ -4,7 +4,6 @@
   @include slideProp;
   background-color: #00CDDE;
 
-
   position: relative;
   // transform: translateX(100%);
   // animation: move 0.5s linear 0.5s forwards;
@@ -12,14 +11,13 @@
   // z-index: 1;
 }
 
-.containerForContent {
+.container-for-content {
   @include containerForContentProp;
   
   position: relative;
-  // z-index: 5;
 }
 
-.containerForContent::after {
+.container-for-content::after {
   content: '';
   position: absolute;
   height: 5px;
@@ -33,58 +31,55 @@
 .slide1__dots {
   position: absolute;
 
-  top: 33%;
-  left: 60%;
+  top: 347px;
+  right: 685px;
+  // top: 37%;
+  // left: 60%;
   background: url(../../images/svg/Dots.svg) no-repeat center;
 }
 
 .slide1__img {
-  max-width: 800px;
-  max-height: 800px;
-  // width: 50%;
   position: absolute;
-  bottom: -22%;
-  right: 0%;
-  // animation: name duration timing-function delay iteration-count direction fill-mode;
+  width: 1030px;
+  // border: 1px solid;
+  height: 1030px;
+  bottom: -306px;
+  right: -30px;
   animation: phone 0.5s linear 0.5s forwards;
   z-index: 4;
-  // opacity: 0.8;
 }
 
 @keyframes phone {
     to {
-      bottom: 0;
-      right: 0;
+      transform: translateY(-306px);
     }
-    // to {
-    //   transform: translateY(-29%);
-    // }
 }
 
 .circle {
-  width: 700px;
-  height: 700px;
+  width: 864px;
+  height: 864px;
   position: absolute;
   background-color: #0044FB;
-  right: -25%;
-  bottom: -55%;
-  // transform: translate(-25% -75%) ;
+  // right: -25%;
+  // bottom: -55%;
+  right: -277px;
+  bottom: -602px;
   border-radius: 50%;
   animation: circle 1s cubic-bezier(0.5, 0.2, 0.265, 1.2) 0.5s forwards;
-  // transition: all 1s;
   z-index: 1;
-  // opacity: 0.4;
-
 }
 
 @keyframes circle {
   to {
-    transform: translate(-45%, -55%) ;
+    transform: translate(-213px, -418px) ;
   }
 }
 
-// @keyframes move {
-//   to {
-//     transform: translate(0) ;
-//   }
-// }
+.header__wrapper {
+  position: absolute;
+  width: 97%;
+  // width: 1860px;
+  padding: 25px;
+  z-index: 10;
+  border: 1px solid black;
+}

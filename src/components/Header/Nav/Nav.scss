@@ -3,6 +3,9 @@ $transiltionProps: all 0.3s linear;
 $orangeColor: #FE5803;
 
 .nav {
+  // position: relative;
+  // z-index: 6;
+
   &__list {
     display: flex;
   }

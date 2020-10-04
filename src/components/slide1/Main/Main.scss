@@ -2,6 +2,7 @@
   width: min-content;
   margin-left: 85px;
   // padding: 20px 0;
+  margin-top: 173px;
 
   &__title {
     position: relative;
@@ -36,7 +37,6 @@
 
     &::after {
       content: '';
-      // display: inline-block;
       height: 8px;
       width: 85px;
       position: absolute;

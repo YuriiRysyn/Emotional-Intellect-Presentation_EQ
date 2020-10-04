@@ -3,9 +3,7 @@ import React from 'react';
 import appleLogo from '../../images/svg/AppleLogo.svg';
 import androidLogo from '../../images/svg/AndroidLogo.svg';
 
-
 import './StoreLinks.scss';
-
 
 export const StoreLinks = () => (
   <div className="main-content__store store">

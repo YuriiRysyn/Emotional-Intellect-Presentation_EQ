@@ -12,7 +12,7 @@ import './Slide2.scss';
 export const Slide2 = ({ selectedSlide, setSelectedSlide }) => (
   <div className="root-2">
 
-    <div className="slide2 containerForContent" >
+    <div className="slide2 containerForContent2" >
       <Header />
       <Main />
 
@@ -24,7 +24,7 @@ export const Slide2 = ({ selectedSlide, setSelectedSlide }) => (
       <img 
         src={dots} 
         alt="2 column of white dots"
-        className="slide1__dots"
+        className="slide2__dots"
       />
 
     </div>
