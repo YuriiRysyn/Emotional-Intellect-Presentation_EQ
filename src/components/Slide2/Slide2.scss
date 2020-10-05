@@ -2,53 +2,69 @@
 
 .root-2 {
   @include slideProp;
+  position: relative;
   background-color: #FFB208;
-
-  position: relative;
-  // transform: translateX(100%);
-  // animation: move 0.5s linear 0.5s forwards;
-
-  // z-index: 1;
 }
 
-.containerForContent2 {
-  @include containerForContentProp;
+.slide2 {
+  &__header-wrapper {
+    position: absolute;
+    width: 97%;
+    // width: 1860px;
+    padding: 25px;
+    z-index: 10;
+  }
   
-  position: relative;
-  // z-index: 5;
+  &__container-for-content {
+    @include containerForContentProp;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 5px;
+      width: 5%;
+      top: 100%;
+      left: 50%;
+      background-color: #00CDDE;
+      transform: translateX(-50%)
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    top: 434px;
+    right: 200px;
+    // top: 37%;
+    // left: 60%;
+    background: url(../../images/svg/Dots2.svg) no-repeat contain;
+  }
+
+  &__img {
+    position: absolute;
+    width: 1030px;
+    // border: 1px solid;
+    height: 1030px;
+    bottom: -306px;
+    right: -30px;
+    animation: phone 0.5s linear 0.5s forwards;
+    z-index: 4;
+  }
+
+  &__circle {
+    width: 785px;
+    height: 785px;
+    position: absolute;
+    background-color: #0044FB;
+    // right: -64px;
+    // top: -98.5px;
+    right: -324px;
+    top: -491px;
+    border-radius: 50%;
+    animation: circle2 1s cubic-bezier(0.5, 0.2, 0.265, 1.2) 0.5s forwards;
+    z-index: 1;
+  }
 }
-
-.containerForContent2::after {
-  content: '';
-  position: absolute;
-  height: 5px;
-  width: 5%;
-  top: 100%;
-  left: 50%;
-  background-color: #00CDDE;
-  transform: translateX(-50%)
-}
-
-.slide1__dots2 {
-  position: absolute;
-
-  top: 33%;
-  left: 60%;
-  background: url(../../images/svg/Dots.svg) no-repeat center;
-}
-
-// .slide1__img {
-//   max-width: 800px;
-//   max-height: 800px;
-//   // width: 50%;
-//   position: absolute;
-//   bottom: -22%;
-//   right: 0%;
-//   // animation: name duration timing-function delay iteration-count direction fill-mode;
-//   animation: phone 0.5s linear 0.5s forwards;
-//   z-index: 4;
-//   // opacity: 0.8;
-// }
 
 // @keyframes phone {
 //     to {
@@ -60,30 +76,8 @@
 //     // }
 // }
 
-// .circle {
-//   width: 700px;
-//   height: 700px;
-//   position: absolute;
-//   background-color: #0044FB;
-//   right: -25%;
-//   bottom: -55%;
-//   // transform: translate(-25% -75%) ;
-//   border-radius: 50%;
-//   animation: circle 1s cubic-bezier(0.5, 0.2, 0.265, 1.2) 0.5s forwards;
-//   // transition: all 1s;
-//   z-index: 1;
-//   // opacity: 0.4;
-
-// }
-
-// @keyframes circle {
-//   to {
-//     transform: translate(-45%, -55%) ;
-//   }
-// }
-
-// // @keyframes move {
-// //   to {
-// //     transform: translate(0) ;
-// //   }
-// // }
+@keyframes circle2 {
+  to {
+    transform: translate(-174px, 398px) ;
+  }
+}

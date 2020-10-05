@@ -3,8 +3,6 @@ $transiltionProps: all 0.3s linear;
 $orangeColor: #FE5803;
 
 .nav {
-  // position: relative;
-  // z-index: 6;
 
   &__list {
     display: flex;
@@ -76,5 +74,11 @@ $orangeColor: #FE5803;
         z-index: 2;
       }
     }
+  }
+}
+
+.active-header2 {
+  &::after {
+    background-color: #FFB208;
   }
 }

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import Carousel from 'react-elastic-carousel';
 
 import { Slide1 } from './components/slide1/Slide1';
 import { Slide2 } from './components/Slide2/Slide2';
@@ -8,73 +7,92 @@ import { Slide3 } from './components/Slide3/Slide3';
 
 import classNames from 'classnames/bind';
 
-// import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
-// import 'pure-react-carousel/dist/react-carousel.es.css';
-
-
 import './App.scss'
+import { useEffect, useCallback } from 'react';
 
-// const cssClasses = 'app app--active';
 
 const App = () => {
   const [selectedSlide, setSelectedSlide] = useState(1);
 
-  return (
+  const renderAll = useCallback(() => (
     <div 
       // className="showSlides"
       className= {classNames(
         "showSlides",
-      { "showSlides": selectedSlide === 1 },
-      { "showSlides active2": selectedSlide === 2 },
-      { "showSlides active3": selectedSlide === 3 },
       )} 
     >
+       {/* display: none; */}
+    <div 
+      className= {classNames(
+        "slideWrapper",
+      { "slideWrapper active1": selectedSlide === 1 },
+      { "slideWrapper active2": selectedSlide === 2 },
+      { "slideWrapper active3": selectedSlide === 3 },
+    )} 
 
-      <div className="slide1wrapper">
-        {selectedSlide === 1 ?
-        <Slide1 selectedSlide={selectedSlide} setSelectedSlide={setSelectedSlide}/>
-        // : <div classNames="empty"></div>
-        :''
-
-        }
+     >
+       <div 
+        className="slide1Wrapper"
+        id={selectedSlide === 1 ? 1 : ''}
+       >
         {/* <Slide1 selectedSlide={selectedSlide} setSelectedSlide={setSelectedSlide}/> */}
-      </div>
-
-      <div className="slide2wrapper">
-      {selectedSlide === 2 ?
         <Slide2 selectedSlide={selectedSlide} setSelectedSlide={setSelectedSlide}/>
-        // : <div classNames="empty"></div>
-        :''
 
-        }
-        {/* <Slide2 selectedSlide={selectedSlide} setSelectedSlide={setSelectedSlide}/> */}
-      </div>
+       </div>
+       <div 
+        className="slide2Wrapper"
+        id={selectedSlide === 2 ? 2 : ''}
 
-        <div className="slide3wrapper">
-        {selectedSlide === 3 ?
+       >
+         {/* <Slide2 selectedSlide={selectedSlide} setSelectedSlide={setSelectedSlide}/> */}
+          <Slide1 selectedSlide={selectedSlide} setSelectedSlide={setSelectedSlide}/>
+
+       </div>
+       <div className="slide3Wrapper">
         <Slide3 selectedSlide={selectedSlide} setSelectedSlide={setSelectedSlide}/>
-        // : <div classNames="empty"></div>
-        :''
+       </div>
+      </div>
+  </div>
+  ),[selectedSlide])
 
-        }
-        </div>
-        {/* <Slide1 selectedSlide={selectedSlide} setSelectedSlide={setSelectedSlide}/>
-        <Slide2 selectedSlide={selectedSlide} setSelectedSlide={setSelectedSlide}/> */}
+  return (
+    renderAll()
 
-    </div>
+    // <div 
+    //   // className="showSlides"
+    //   className= {classNames(
+    //     "showSlides",
+    //   )} 
+    // >
+    //      {/* display: none; */}
+    //   <div 
+    //   className= {classNames(
+    //     "slideWrapper",
+    //   { "slideWrapper active1": selectedSlide === 1 },
+    //   { "slideWrapper active2": selectedSlide === 2 },
+    //   { "slideWrapper active3": selectedSlide === 3 },
+    //   )} 
 
-//   <Carousel itemsToShow={1}>
+    //    >
+    //      <div className="slide1Wrapper">
+    //       <Slide1 selectedSlide={selectedSlide} setSelectedSlide={setSelectedSlide}/>
+    //      </div>
+    //      <div className="slide2Wrapper">
+    //        {selectedSlide > 1 ?
+    //        <Slide2 selectedSlide={selectedSlide} setSelectedSlide={setSelectedSlide}/>
+    //         : ''
+    //        }
+    //      </div>
+    //      <div className="slide3Wrapper">
+    //      {selectedSlide > 1 ?
+    //       <Slide3 selectedSlide={selectedSlide} setSelectedSlide={setSelectedSlide}/>
+    //         : ''
+    //        }
 
-//  <Slide1 selectedSlide={selectedSlide} setSelectedSlide={setSelectedSlide}/>
-
-//    <Slide2 selectedSlide={selectedSlide} setSelectedSlide={setSelectedSlide}/>
-
-
-// </Carousel>
-
+    //      </div>
+    //     </div>
+    // </div>
   );
-
-
 }
 
 export default App;

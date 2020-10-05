@@ -16,7 +16,7 @@ export const Slide3 = ({ selectedSlide, setSelectedSlide }) => (
         setSelectedSlide={setSelectedSlide} 
       />
     <div className="header__wrapper">
-      <Header />
+      <Header selectedSlide={selectedSlide} />
 
     </div>
 

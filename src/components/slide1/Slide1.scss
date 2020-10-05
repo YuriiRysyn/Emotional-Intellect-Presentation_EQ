@@ -2,51 +2,72 @@
 
 .root-1 {
   @include slideProp;
-  background-color: #00CDDE;
-
   position: relative;
-  // transform: translateX(100%);
-  // animation: move 0.5s linear 0.5s forwards;
 
-  // z-index: 1;
+  background-color: #00CDDE;
 }
 
-.container-for-content {
-  @include containerForContentProp;
+.slide1 {
+
+  &__header-wrapper {
+    position: absolute;
+    width: 97%;
+    // width: 1860px;
+    padding: 25px;
+    z-index: 10;
+  }
   
-  position: relative;
-}
+  &__container-for-content {
+    @include containerForContentProp;
+    
+    position: relative;
 
-.container-for-content::after {
-  content: '';
-  position: absolute;
-  height: 5px;
-  width: 5%;
-  top: 100%;
-  left: 50%;
-  background-color: #00CDDE;
-  transform: translateX(-50%)
-}
+    &::after {
+      content: '';
+      position: absolute;
+      height: 5px;
+      width: 5%;
+      top: 100%;
+      left: 50%;
+      background-color: #00CDDE;
+      transform: translateX(-50%)
+    }
+  }
 
-.slide1__dots {
-  position: absolute;
+  &__dots {
+    position: absolute;
+  
+    top: 347px;
+    right: 685px;
+    // top: 37%;
+    // left: 60%;
+    background: url(../../images/svg/Dots.svg) no-repeat contain;
+  }
 
-  top: 347px;
-  right: 685px;
-  // top: 37%;
-  // left: 60%;
-  background: url(../../images/svg/Dots.svg) no-repeat center;
-}
+  &__img {
+    position: absolute;
+    width: 1030px;
+    // border: 1px solid;
+    height: 1030px;
+    bottom: -306px;
+    right: -30px;
+    animation: phone 0.5s linear 0.5s forwards;
+    z-index: 4;
+  }
 
-.slide1__img {
-  position: absolute;
-  width: 1030px;
-  // border: 1px solid;
-  height: 1030px;
-  bottom: -306px;
-  right: -30px;
-  animation: phone 0.5s linear 0.5s forwards;
-  z-index: 4;
+  &__circle {
+    width: 864px;
+    height: 864px;
+    position: absolute;
+    background-color: #0044FB;
+    // right: -25%;
+    // bottom: -55%;
+    right: -277px;
+    bottom: -602px;
+    border-radius: 50%;
+    animation: circle 1s cubic-bezier(0.5, 0.2, 0.265, 1.2) 0.5s forwards;
+    z-index: 1;
+  }
 }
 
 @keyframes phone {
@@ -55,19 +76,6 @@
     }
 }
 
-.circle {
-  width: 864px;
-  height: 864px;
-  position: absolute;
-  background-color: #0044FB;
-  // right: -25%;
-  // bottom: -55%;
-  right: -277px;
-  bottom: -602px;
-  border-radius: 50%;
-  animation: circle 1s cubic-bezier(0.5, 0.2, 0.265, 1.2) 0.5s forwards;
-  z-index: 1;
-}
 
 @keyframes circle {
   to {
@@ -75,11 +83,3 @@
   }
 }
 
-.header__wrapper {
-  position: absolute;
-  width: 97%;
-  // width: 1860px;
-  padding: 25px;
-  z-index: 10;
-  border: 1px solid black;
-}

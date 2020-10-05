@@ -5,52 +5,56 @@
 .showSlides {
   position: relative;
   height: 100vh;
-  // overflow: hidden;
+  width: 100%;
+  overflow: hidden;
   transition: all 0.5s;
+}
 
+.slideWrapper {
+  display: none;
+}
+
+.active1 {
+  display: block;
+
+  height: 100vh;
+  transition: all 0.5s;
   transform: translateX(0);
 
 }
 
-// .showSlides2 {
-//   position: relative;
-//   height: 100vh;
-//   overflow: hidden;
-//   // transform: translateX(-10%);
-// }
 .active2 {
-  transition: all 0.5s;
+  display: block;
+
+  height: 100vh;
   transform: translateX(-100%);
+  transition: all 0.5s;
 }
 
 .active3 {
+  display: block;
+
+  height: 100vh;
   transition: all 0.5s;
-  // transform: translateX(-100%);
+  transform: translateX(-200%);
 }
-  .slide1wrapper {
-    // grid-area: a;
+  
+  .slideWrapper {
+    width: 100%;
+    position: absolute;
+}
+  .slide1Wrapper {
     position: absolute;
     width: 100%;
-
+    transform: translateX(0);
   }
-
-  .slide2wrapper {
-    // grid-area: b;
-
+  .slide2Wrapper {
     position: absolute;
-    // right: 100%;
     width: 100%;
-    // right: -100%;
     transform: translateX(100%);
   }
-
-  .slide3wrapper {
-    // grid-area: c;
-    
-  }
-
-  .empty {
+  .slide3Wrapper {
+    position: absolute;
     width: 100%;
-    height: 100%;
-    background-color: blueviolet;
+    transform: translateX(200%);
   }

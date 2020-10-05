@@ -5,14 +5,14 @@ import './Header.scss';
 
 import logo from '../../images/svg/logo.svg';
 
-export const Header = () => (
-  <header className="slide1__header header">
+export const Header = ({ selectedSlide }) => (
+  <header className="header">
     <div className="header__logo">
       <a href="/#">
         <img src={logo} alt="logo"/>
       </a>
     </div>
     
-    <Nav />
+    <Nav selectedSlide={selectedSlide} />
   </header>
 );
