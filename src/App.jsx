@@ -17,7 +17,6 @@ const App = () => {
         setSelectedSlide(1)
         return;
       };
-
       setSelectedSlide(selectedSlide + 1)
     }
 
@@ -26,10 +25,8 @@ const App = () => {
         setSelectedSlide(3)
         return;
       };
-
       setSelectedSlide(selectedSlide - 1)
     }
-    
   });
   
   return (
