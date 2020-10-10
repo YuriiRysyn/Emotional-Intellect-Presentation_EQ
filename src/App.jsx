@@ -31,6 +31,7 @@ const App = () => {
     }
     
   });
+  
   return (
     <div className="slides">
       <div 

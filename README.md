@@ -1,4 +1,4 @@
-#Emotional Intellect Presentation (EQ)
+# Emotional Intellect Presentation (EQ)
 
 [DEMO LINK](https://YuriiRysyn.github.io/Emotional-Intellect-Presentation_EQ/)
 
