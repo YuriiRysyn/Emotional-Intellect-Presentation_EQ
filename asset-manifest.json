@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/Emotional-Intellect-Presentation_EQ/static/css/main.ef7a9e98.chunk.css",
+    "main.js": "/Emotional-Intellect-Presentation_EQ/static/js/main.f4a67049.chunk.js",
+    "main.js.map": "/Emotional-Intellect-Presentation_EQ/static/js/main.f4a67049.chunk.js.map",
+    "runtime-main.js": "/Emotional-Intellect-Presentation_EQ/static/js/runtime-main.c8d534e6.js",
+    "runtime-main.js.map": "/Emotional-Intellect-Presentation_EQ/static/js/runtime-main.c8d534e6.js.map",
+    "static/js/2.09ba55f7.chunk.js": "/Emotional-Intellect-Presentation_EQ/static/js/2.09ba55f7.chunk.js",
+    "static/js/2.09ba55f7.chunk.js.map": "/Emotional-Intellect-Presentation_EQ/static/js/2.09ba55f7.chunk.js.map",
+    "index.html": "/Emotional-Intellect-Presentation_EQ/index.html",
+    "precache-manifest.7e89311a7bddc7ede89d209c613db55c.js": "/Emotional-Intellect-Presentation_EQ/precache-manifest.7e89311a7bddc7ede89d209c613db55c.js",
+    "service-worker.js": "/Emotional-Intellect-Presentation_EQ/service-worker.js",
+    "static/css/main.ef7a9e98.chunk.css.map": "/Emotional-Intellect-Presentation_EQ/static/css/main.ef7a9e98.chunk.css.map",
+    "static/js/2.09ba55f7.chunk.js.LICENSE.txt": "/Emotional-Intellect-Presentation_EQ/static/js/2.09ba55f7.chunk.js.LICENSE.txt",
+    "static/media/AndroidLogo.svg": "/Emotional-Intellect-Presentation_EQ/static/media/AndroidLogo.73a46ede.svg",
+    "static/media/AppleLogo.svg": "/Emotional-Intellect-Presentation_EQ/static/media/AppleLogo.bd480ca4.svg",
+    "static/media/Slide1.scss": "/Emotional-Intellect-Presentation_EQ/static/media/Dots.e989d5ef.svg",
+    "static/media/Slide3.scss": "/Emotional-Intellect-Presentation_EQ/static/media/Dots2.f9f0e01b.svg",
+    "static/media/App.scss": "/Emotional-Intellect-Presentation_EQ/static/media/SourceCodePro-Regular.b484b32f.ttf",
+    "static/media/Indicators.scss": "/Emotional-Intellect-Presentation_EQ/static/media/purpleTriangle.89dfc243.svg",
+    "static/media/logo.svg": "/Emotional-Intellect-Presentation_EQ/static/media/logo.2fe8a701.svg",
+    "static/media/slide1Img.svg": "/Emotional-Intellect-Presentation_EQ/static/media/slide1Img.ba52bc3c.svg",
+    "static/media/slide2Img.svg": "/Emotional-Intellect-Presentation_EQ/static/media/slide2Img.14b8ffea.svg",
+    "static/media/slide3Img.svg": "/Emotional-Intellect-Presentation_EQ/static/media/slide3Img.96fe4ffe.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c8d534e6.js",
+    "static/js/2.09ba55f7.chunk.js",
+    "static/css/main.ef7a9e98.chunk.css",
+    "static/js/main.f4a67049.chunk.js"
+  ]
+}
