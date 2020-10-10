@@ -11,6 +11,26 @@ import './App.scss'
 const App = () => {
   const [selectedSlide, setSelectedSlide] = useState(1);
 
+  document.addEventListener("keyup", event => {
+    if ( event.keyCode === 39) {
+      if (selectedSlide === 3) {
+        setSelectedSlide(1)
+        return;
+      };
+
+      setSelectedSlide(selectedSlide + 1)
+    }
+
+    if ( event.keyCode === 37) {
+      if (selectedSlide === 1) {
+        setSelectedSlide(3)
+        return;
+      };
+
+      setSelectedSlide(selectedSlide - 1)
+    }
+    
+  });
   return (
     <div className="slides">
       <div 
