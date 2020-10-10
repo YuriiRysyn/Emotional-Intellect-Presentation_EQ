@@ -14,7 +14,7 @@ The project was created according to design, on the extension fullHD, 1920: 1080
 The project was creater with:
 
 - React/Hooks
-- JavaScritp
+- JavaScript
 - HTML5
 - CSS3
 - SASS(SCSS)
