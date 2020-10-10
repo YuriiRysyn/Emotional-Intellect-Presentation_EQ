@@ -12,7 +12,6 @@
   &__header-wrapper {
     position: absolute;
     width: 97%;
-    // width: 1860px;
     padding: 25px;
     z-index: 10;
   }
@@ -36,23 +35,22 @@
 
   &__dots {
     position: absolute;
-  
     top: 347px;
     right: 685px;
-    // top: 37%;
-    // left: 60%;
     background: url(../../images/svg/Dots.svg) no-repeat contain;
   }
 
   &__img {
     position: absolute;
     width: 1030px;
-    // border: 1px solid;
     height: 1030px;
     bottom: -306px;
     right: -30px;
-    animation: phone 0.5s linear 0.5s forwards;
     z-index: 4;
+
+    &--active {
+      animation: phone 0.5s linear 1s forwards;
+    }
   }
 
   &__circle {
@@ -60,13 +58,15 @@
     height: 864px;
     position: absolute;
     background-color: #0044FB;
-    // right: -25%;
-    // bottom: -55%;
     right: -277px;
     bottom: -602px;
     border-radius: 50%;
-    animation: circle 1s cubic-bezier(0.5, 0.2, 0.265, 1.2) 0.5s forwards;
     z-index: 1;
+
+    &--active {
+      animation: circle 1s cubic-bezier(0.5, 0.2, 0.265, 1.2) 1s forwards;
+
+    }
   }
 }
 
@@ -75,7 +75,6 @@
       transform: translateY(-306px);
     }
 }
-
 
 @keyframes circle {
   to {

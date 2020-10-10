@@ -1,31 +1,42 @@
 import React from 'react';
 import { StoreLinks } from '../../StoreLinks/StoreLinks';
+import classNames from 'classnames/bind';
 
-import './Main2.scss';
+import './Main3.scss';
 
-export const Main2 = () => (
-  <div className="slide2__main-content2 main-content2">
+export const Main3 = ( {selectedSlide} ) => (
+  <div className="slide3__main-content3 main-content3">
 
-    <div className="main-content2__title">
-      <h1 className="main-content2__headling">
-        как
+    <div 
+      className= {classNames(
+        "main-content3__title3",
+        { "main-content3__title3--active": selectedSlide === 3 },
+      )} 
+    >
+      <h1 className="main-content3__headling">
+        что
         <br/>
-          управлять
+          со&nbsp;мной
         <br/>
-        <span className="main-content2__headling--selected-text">
-          емоциями
+        <span className="main-content3__headling--selected-text">
+          не так?
         </span>
       </h1>
     </div>
-    <p className="main-content2__description">
+    <p 
+      className= {classNames(
+        "main-content3__description",
+        { "main-content3__description--active": selectedSlide === 3 },
+      )} 
+    >
       находи ответы в новом
       <br/>
       мобильном приложении 
-      <span className="main-content2__description--selected-text">
+      <span className="main-content3__description--selected-text">
       &nbsp;EQ
       </span>
     </p>
 
-    <StoreLinks />
+    <StoreLinks selectedSlide={selectedSlide} />
   </div>
 );

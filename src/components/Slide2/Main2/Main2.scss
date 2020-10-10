@@ -4,10 +4,14 @@
   margin-left: 85px;
   margin-top: 173px;
 
-    &__title {
+    &__title2 {
       position: relative;
       overflow: hidden;
   
+      &--active::after {
+        animation: showContent 0.5s linear 1s forwards;
+      }
+
       &::after {
         content: '';
         height: 100%;
@@ -15,7 +19,7 @@
         top: 0;
         position: absolute;
         background-color: #FFB208;
-        animation: showContent 0.5s linear 0.5s forwards;
+        
       }
     }
     
@@ -53,7 +57,10 @@
       line-height: 28px;
       text-transform: uppercase;
       opacity: 0;
-      animation: removeOpacity 0.5s linear 0.5s forwards;
+
+      &--active {
+        animation: removeOpacity 0.5s linear 1s forwards;
+      }
       
       &--selected-text {
         color:#0044FB;

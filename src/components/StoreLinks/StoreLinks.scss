@@ -1,7 +1,18 @@
 .store {
   display: flex;
   opacity: 0;
-  animation: removeOpacity 0.5s linear 0.5s forwards;
+
+  &--active1 {
+    animation: removeOpacity 0.5s linear 1s forwards;
+  }
+  
+  &--active2 {
+    animation: removeOpacity2 0.5s linear 1s forwards;
+  }
+
+  &--active3 {
+    animation: removeOpacity3 0.5s linear 1s forwards;
+  }
 
   &__link {
     display: flex;
@@ -62,6 +73,18 @@
 }
 
 @keyframes removeOpacity {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes removeOpacity2 {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes removeOpacity3 {
   to {
     opacity: 1;
   }

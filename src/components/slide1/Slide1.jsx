@@ -2,8 +2,10 @@ import React from 'react';
 import { Header } from '../Header/Header';
 import { Main } from './Main/Main';
 import { Indicators } from '../Indicators/Indicators';
+import classNames from 'classnames/bind';
 
-import iPhoneX1 from '../../images/svg/iPhoneX-1.svg';
+
+import iPhoneX1 from '../../images/svg/slide1Img.svg';
 import dots from '../../images/svg/Dots.svg';
 
 import './Slide1.scss';
@@ -21,15 +23,26 @@ export const Slide1 = ({ selectedSlide, setSelectedSlide }) => (
     </div>
 
     <div className="slide1__container-for-content container-for-content" >
-      <Main />
+      <Main selectedSlide={selectedSlide} />
       <img 
         src={dots} 
         alt="2 column of white dots"
         className="slide1__dots"
       />
     </div>
-    <img src={iPhoneX1} alt="hand holding Iphone" className="slide1__img"/>
-    <div className="slide1__circle" />
-
+    <img 
+      src={iPhoneX1} 
+      alt="hand holding Iphone" 
+      className= {classNames(
+        "slide1__img",
+        { "slide1__img--active": selectedSlide === 1 },
+      )} 
+    />
+    <div
+      className= {classNames(
+        "slide1__circle",
+        { "slide1__circle--active": selectedSlide === 1 },
+     )} 
+     />
   </div>
 );

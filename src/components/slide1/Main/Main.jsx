@@ -1,12 +1,18 @@
 import React from 'react';
 import { StoreLinks } from '../../StoreLinks/StoreLinks';
+import classNames from 'classnames/bind';
 
 import './Main.scss';
 
-export const Main = () => (
+export const Main = ({ selectedSlide } ) => (
   <div className="slide1__main-content main-content">
 
-    <div className="main-content__title">
+    <div 
+      className= {classNames(
+        "main-content__title",
+        { "main-content__title--active": selectedSlide === 1 },
+      )} 
+    >
       <h1 className="main-content__headling">
         Твой 
         <br/>
@@ -21,12 +27,17 @@ export const Main = () => (
         тренер
       </h1>
     </div>
-    <p className="main-content__description">
+    <p 
+    className= {classNames(
+      "main-content__description",
+      { "main-content__description--active": selectedSlide === 1 },
+    )} 
+    >
       позаботьтесь о себе и
       <br/>
       своих близких
     </p>
 
-    <StoreLinks />
+    <StoreLinks selectedSlide={selectedSlide}/>
   </div>
 );

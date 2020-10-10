@@ -1,12 +1,20 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 
 import appleLogo from '../../images/svg/AppleLogo.svg';
 import androidLogo from '../../images/svg/AndroidLogo.svg';
 
 import './StoreLinks.scss';
 
-export const StoreLinks = () => (
-  <div className="main-content__store store">
+export const StoreLinks = ({ selectedSlide }) => (
+  <div 
+    className= {classNames(
+      "main-content__store store",
+      { "store--active1": selectedSlide === 1 },
+      { "store--active2": selectedSlide === 2 },
+      { "store--active3": selectedSlide === 3 },
+    )}
+  >
 
   <a href="https://www.apple.com/ru/ios/app-store" className="store__link">
     <img src={appleLogo} alt="apple store logo" className="store__link--logo"/>

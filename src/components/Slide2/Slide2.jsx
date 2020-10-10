@@ -3,8 +3,9 @@ import { Header } from '../Header/Header';
 import { Main2 } from './Main2/Main2';
 import { Indicators } from '../Indicators/Indicators';
 
+import classNames from 'classnames/bind';
 
-// import iPhoneX1 from '../../images/svg/iPhoneX-1.svg';
+import holdingBananaHand from '../../images/svg/slide2Img.svg';
 import dots from '../../images/svg/Dots.svg';
 
 import './Slide2.scss';
@@ -21,8 +22,13 @@ export const Slide2 = ({ selectedSlide, setSelectedSlide }) => (
       <Header selectedSlide={selectedSlide} />
     </div>
 
-    <div className="slide2__container-for-content" >
-      < Main2 />
+    <div 
+      className= {classNames(
+        "slide2__container-for-content",
+        { "slide2__container-for-content--active": selectedSlide === 2 },
+      )} 
+     >
+      < Main2 selectedSlide={selectedSlide} />
       <img 
         src={dots} 
         alt="2 column of white dots"
@@ -30,8 +36,20 @@ export const Slide2 = ({ selectedSlide, setSelectedSlide }) => (
       />
     </div>
 
-    {/* <img src={iPhoneX1} alt="hand holding Iphone" className="slide2__img"/> */}
-    <div className="slide2__circle" />
+    <img 
+      src={holdingBananaHand} 
+      alt="hand holding banana" 
+      className= {classNames(
+        "slide2__img",
+        { "slide2__img--active": selectedSlide === 2 },
+      )} 
+    />
+    <div 
+      className= {classNames(
+        "slide2__circle",
+        { "slide2__circle--active": selectedSlide === 2 },
+      )} 
+    />
 
   </div>
 );

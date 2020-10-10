@@ -10,7 +10,6 @@
   &__header-wrapper {
     position: absolute;
     width: 97%;
-    // width: 1860px;
     padding: 25px;
     z-index: 10;
   }
@@ -29,26 +28,32 @@
       background-color: #00CDDE;
       transform: translateX(-50%)
     }
+
+    &--active::after {
+      background-color:#FFB208;
+
+    }
   }
 
   &__dots {
     position: absolute;
-    top: 434px;
+    top: 385px;
     right: 200px;
-    // top: 37%;
-    // left: 60%;
     background: url(../../images/svg/Dots2.svg) no-repeat contain;
+    transform: scaleX(-1) rotate(180deg);
   }
 
   &__img {
     position: absolute;
-    width: 1030px;
-    // border: 1px solid;
-    height: 1030px;
-    bottom: -306px;
-    right: -30px;
-    animation: phone 0.5s linear 0.5s forwards;
-    z-index: 4;
+    width: 1729px;
+    height: 1143px;
+    top: -716px;
+    right: -600px;
+    z-index: 2;
+
+    &--active {
+      animation: banana 0.5s linear 1s forwards;
+    }
   }
 
   &__circle {
@@ -56,28 +61,25 @@
     height: 785px;
     position: absolute;
     background-color: #0044FB;
-    // right: -64px;
-    // top: -98.5px;
     right: -324px;
     top: -491px;
     border-radius: 50%;
-    animation: circle2 1s cubic-bezier(0.5, 0.2, 0.265, 1.2) 0.5s forwards;
     z-index: 1;
+
+    &--active {
+      animation: circle2 1s cubic-bezier(0.5, 0.2, 0.265, 1.2) 1s forwards;
+    }
   }
 }
 
-// @keyframes phone {
-//     to {
-//       bottom: 0;
-//       right: 0;
-//     }
-//     // to {
-//     //   transform: translateY(-29%);
-//     // }
-// }
+@keyframes banana {
+  to {
+    transform: translate(-210px,405px);
+  }
+}
 
 @keyframes circle2 {
   to {
-    transform: translate(-174px, 398px) ;
+    transform: translate(-194px, 330px) ;
   }
 }

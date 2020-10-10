@@ -40,7 +40,6 @@ $orangeColor: #FE5803;
       text-transform: uppercase;
       transition: $transiltionProps;
       
-
       &:hover {
         color: $orangeColor;
       }
@@ -79,6 +78,10 @@ $orangeColor: #FE5803;
 
 .active-header2 {
   &::after {
-    background-color: #FFB208;
+    background-color: #0044FB;
+  }
+
+  &::before {
+    background-color: #FC17AA;
   }
 }

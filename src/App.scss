@@ -2,7 +2,7 @@
 @import './styles/mixins';
 @import './styles/fonts';
 
-.showSlides {
+.slides {
   position: relative;
   height: 100vh;
   width: 100%;
@@ -10,50 +10,44 @@
   transition: all 0.5s;
 }
 
-.slideWrapper {
-  display: none;
-}
+.slides-wrapper {
+  width: 100%;
+  position: absolute;
 
-.active1 {
-  display: block;
-
-  height: 100vh;
-  transition: all 0.5s;
-  transform: translateX(0);
-
-}
-
-.active2 {
-  display: block;
-
-  height: 100vh;
-  transform: translateX(-100%);
-  transition: all 0.5s;
-}
-
-.active3 {
-  display: block;
-
-  height: 100vh;
-  transition: all 0.5s;
-  transform: translateX(-200%);
-}
+  &--active1 {
+    display: block;
+    height: 100vh;
+    transition: all 0.5s;
+    transform: translateX(0);
   
-  .slideWrapper {
-    width: 100%;
-    position: absolute;
+  }
+  
+  &--active2 {
+    display: block;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+  }
+  
+  &--active3 {
+    display: block;
+    height: 100vh;
+    transition: all 0.5s;
+    transform: translateX(-200%);
+  }
 }
-  .slide1Wrapper {
+
+  .slide1-wrapper {
     position: absolute;
     width: 100%;
     transform: translateX(0);
   }
-  .slide2Wrapper {
+  .slide2-wrapper {
     position: absolute;
     width: 100%;
     transform: translateX(100%);
   }
-  .slide3Wrapper {
+  .slide3-wrapper {
     position: absolute;
     width: 100%;
     transform: translateX(200%);
